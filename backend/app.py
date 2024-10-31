@@ -29,6 +29,12 @@ def serialize_doc(doc):
 
 # Routes
 
+@app.route('/')
+def hello():
+    print("Hello world *****************")
+    return "Hello, World!"
+
+
 @app.route('/api/contents', methods=['GET'])
 def get_contents():
     contents = contents_collection.find()
