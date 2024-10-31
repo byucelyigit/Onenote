@@ -62,11 +62,21 @@ def create_content():
 @app.route('/api/contents/<id>', methods=['PUT'])
 def update_content(id):
     data = request.get_json()
-    content = data.get('content', '')
+    content = data.get('content', None)
+    title = data.get('title', None)
+
+    update_fields = {}
+    if content is not None:
+        update_fields['content'] = content
+    if title is not None:
+        update_fields['title'] = title
+
+    if not update_fields:
+        return jsonify({'error': 'No fields to update'}), 400
 
     result = contents_collection.find_one_and_update(
         {'_id': ObjectId(id)},
-        {'$set': {'content': content}},
+        {'$set': update_fields},
         return_document=True
     )
 
