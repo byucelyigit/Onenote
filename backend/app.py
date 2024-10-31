@@ -32,7 +32,7 @@ def serialize_doc(doc):
 @app.route('/')
 def hello():
     print("Hello world *****************")
-    return "Hello, World!"
+    return "Hello, World! v1.0"
 
 
 @app.route('/api/contents', methods=['GET'])
