@@ -79,7 +79,7 @@ const App: React.FC = () => {
         console.error('Error updating content:', error);
         setSnackbar({ open: true, message: 'Failed to update content.', severity: 'error' });
       }
-    }, 500),
+    }, 2000),
     [contents, API_BASE_URL]
   );
 
