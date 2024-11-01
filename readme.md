@@ -13,5 +13,6 @@
 - o1 canvas ile bazı değişiklikleri tüm kod üzerinde yapmak oldukça pratik oluyor.
 - Azure üzerinde react arayüz: https://brave-sea-02558b10f.5.azurestaticapps.net/
 - Azure üzerinde backend servis: https://notetaker-evaff4gsghfeg0a2.germanywestcentral-01.azurewebsites.net/api/contents
+- azure üzerindeki tüm kaynaklar ücretsiz kaynaklar olarak ayarlandı.
 
 
